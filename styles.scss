@@ -1,0 +1,143 @@
+@import "navbar";
+@import "media_query";
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Spartan";
+  font-size: 12px;
+  overflow-x: hidden;
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item1 img {
+  max-width: 100%;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+.hero {
+  width: auto;
+  height: 100%;
+  width: 100vw;
+}
+
+.item2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 6rem 6rem;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 2.3rem;
+  }
+  .arrow {
+    display: flex;
+    position: relative;
+    margin-top: 2.5rem;
+    letter-spacing: 10px;
+    color: hsl(0, 0%, 27%);
+    font-weight: 600;
+    cursor: pointer;
+
+    img {
+      margin-left: 3rem;
+      color: rgb(161, 161, 161);
+      width: 40px;
+      height: 20px;
+    }
+  }
+}
+
+p {
+  line-height: 1.6;
+  color: hsl(0, 0%, 63%);
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  max-width: 100%;
+
+  .item3,
+  .item5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.item4 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3rem;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-left: -6rem;
+
+  @include tablet {
+    top: 0;
+    bottom: auto;
+    margin-top: -4.3rem;
+    right: 0;
+  }
+
+  @include mobile {
+  }
+}
+
+.controls img {
+  height: 20px;
+  width: 20px;
+}
+
+.left,
+.right {
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 0%);
+  padding: 22px 28.5px;
+  cursor: pointer;
+}
+
+.left:hover,
+.right:hover {
+  background: hsl(0, 0%, 63%);
+}
